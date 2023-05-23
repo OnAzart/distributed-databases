@@ -1,33 +1,23 @@
 # Comparison of lost update solutions. By case, time.
+from functools import partial
 
 # lost_update – 14.0 sec
 # inplace_update – 12.9 sec
 # row_level_locking_update – 20.8 sec
 # optimistic_concurrency_control_update – 92.2 sec
 
-import threading
-
 from psycopg2 import connect
-from time import time
+from tools import *
 
 config = {
     "host": "localhost",
     "dbname": "uku",
-    "user": "",
-    "password": "",
+    "user": "nazar",
+    "password": "<pass>",
     "port": "5432"
 }
 
 table_name = 'dist_db.user_counter'
-
-
-def get_duration_decorator(func_to_measure):
-    # usually this function need to return result of a function as decorator
-    start_time = time()
-    result = func_to_measure()
-    end_time = time()
-    duration = end_time - start_time
-    return duration
 
 
 def connect_to_postgres():
@@ -69,36 +59,28 @@ def optimistic_concurrency_control_update(conn, cursor):
                        f"where user_id = 1 and version = {current_version}")
         conn.commit()
         count = cursor.rowcount
-        #print(f'{counter}c - {version}v. {count}rc')
+        # print(f'{counter}c - {version}v. {count}rc')
         if count > 0:
             break
 
 
-def launch_10_threads_for(realisation_function):
-    def add_10_000_to_postgres():
-        with connect_to_postgres() as conn:
-            with conn.cursor() as cursor:
-                for i in range(10_000):
-                    realisation_function(conn, cursor)
-                    conn.commit()
-
-    threads = []
-    for i in range(10):
-        threads.append(threading.Thread(target=add_10_000_to_postgres))
-
-    for thread in threads:
-        thread.start()
-
-    for thread in threads:
-        thread.join()
+def add_10_000_to_postgres(realisation_function):
+    with connect_to_postgres() as conn:
+        with conn.cursor() as cursor:
+            for i in range(10_000):
+                realisation_function(conn, cursor)
+                conn.commit()
 
 
 def main():
     # update_function = optimistic_concurrency_control_update
     update_functions = [lost_update, inplace_update, row_level_locking_update, optimistic_concurrency_control_update]
+    # update_functions = [lost_update, inplace_update, row_level_locking_update, optimistic_concurrency_control_update]
     for update_function in update_functions:
-        func_to_run = lambda: launch_10_threads_for(update_function)
-        duration = round(get_duration_decorator(func_to_run), 1)
+        duration = round(
+            run_with_duration_decorator(
+                partial(launch_10_threads_for, partial(add_10_000_to_postgres, update_function))
+            ), 1)
         print(f'{update_function.__name__} – {duration} sec')
 
 

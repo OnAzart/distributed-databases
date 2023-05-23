@@ -1,0 +1,72 @@
+2023-05-22 19:50:41,664 [ WARN] [MC-Client-dev.internal-1] [c.h.c.i.c.t.HeartbeatManager]: MC-Client-dev [dev] [5.2.1] Heartbeat failed over the connection: ClientConnection{alive=true, connectionId=2, channel=NioChannel{/127.0.0.1:57756->/127.0.0.1:5702}, remoteAddress=[127.0.0.1]:5702, lastReadTime=2023-05-22 19:48:42.800, lastWriteTime=2023-05-22 19:50:41.655, closedTime=never, connected server version=null}
+2023-05-22 19:50:41,697 [ WARN] [MC-Client-dev.internal-1] [c.h.c.i.c.t.TcpClientConnection]: MC-Client-dev [dev] [5.2.1] ClientConnection{alive=false, connectionId=2, channel=NioChannel{/127.0.0.1:57756->/127.0.0.1:5702}, remoteAddress=[127.0.0.1]:5702, lastReadTime=2023-05-22 19:50:41.658, lastWriteTime=2023-05-22 19:50:41.655, closedTime=2023-05-22 19:50:41.696, connected server version=null} closed. Reason: Heartbeat timed out
+com.hazelcast.spi.exception.TargetDisconnectedException: Heartbeat timed out to connection ClientConnection{alive=true, connectionId=2, channel=NioChannel{/127.0.0.1:57756->/127.0.0.1:5702}, remoteAddress=[127.0.0.1]:5702, lastReadTime=2023-05-22 19:50:41.658, lastWriteTime=2023-05-22 19:50:41.655, closedTime=never, connected server version=null}
+	at com.hazelcast.client.impl.connection.tcp.HeartbeatManager.lambda$start$0(HeartbeatManager.java:59) ~[hazelcast-enterprise-5.2.1.jar!/:5.2.1]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577) ~[?:?]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358) ~[?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.lang.Thread.run(Thread.java:1623) ~[?:?]
+	at com.hazelcast.internal.util.executor.HazelcastManagedThread.executeRun(HazelcastManagedThread.java:76) ~[hazelcast-enterprise-5.2.1.jar!/:5.2.1]
+	at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102) ~[hazelcast-enterprise-5.2.1.jar!/:5.2.1]
+2023-05-22 22:33:51,143 [ WARN] [MC-Client-dev.internal-1] [c.h.c.i.c.t.HeartbeatManager]: MC-Client-dev [dev] [5.2.1] Heartbeat failed over the connection: ClientConnection{alive=true, connectionId=4, channel=NioChannel{/127.0.0.1:58411->/127.0.0.1:5702}, remoteAddress=[127.0.0.1]:5702, lastReadTime=2023-05-22 22:32:41.475, lastWriteTime=2023-05-22 22:32:41.474, closedTime=never, connected server version=null}
+2023-05-22 22:33:51,145 [ WARN] [MC-Client-dev.internal-1] [c.h.c.i.c.t.TcpClientConnection]: MC-Client-dev [dev] [5.2.1] ClientConnection{alive=false, connectionId=4, channel=NioChannel{/127.0.0.1:58411->/127.0.0.1:5702}, remoteAddress=[127.0.0.1]:5702, lastReadTime=2023-05-22 22:32:41.475, lastWriteTime=2023-05-22 22:32:41.474, closedTime=2023-05-22 22:33:51.144, connected server version=null} closed. Reason: Heartbeat timed out
+com.hazelcast.spi.exception.TargetDisconnectedException: Heartbeat timed out to connection ClientConnection{alive=true, connectionId=4, channel=NioChannel{/127.0.0.1:58411->/127.0.0.1:5702}, remoteAddress=[127.0.0.1]:5702, lastReadTime=2023-05-22 22:32:41.475, lastWriteTime=2023-05-22 22:32:41.474, closedTime=never, connected server version=null}
+	at com.hazelcast.client.impl.connection.tcp.HeartbeatManager.lambda$start$0(HeartbeatManager.java:59) ~[hazelcast-enterprise-5.2.1.jar!/:5.2.1]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577) ~[?:?]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358) ~[?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.lang.Thread.run(Thread.java:1623) ~[?:?]
+	at com.hazelcast.internal.util.executor.HazelcastManagedThread.executeRun(HazelcastManagedThread.java:76) ~[hazelcast-enterprise-5.2.1.jar!/:5.2.1]
+	at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102) ~[hazelcast-enterprise-5.2.1.jar!/:5.2.1]
+2023-05-23 02:36:04,590 [ WARN] [MC-Client-dev.internal-1] [c.h.c.i.c.t.HeartbeatManager]: MC-Client-dev [dev] [5.2.1] Heartbeat failed over the connection: ClientConnection{alive=true, connectionId=7, channel=NioChannel{/127.0.0.1:59461->/127.0.0.1:5702}, remoteAddress=[127.0.0.1]:5702, lastReadTime=2023-05-23 02:36:04.586, lastWriteTime=2023-05-23 02:36:04.576, closedTime=never, connected server version=null}
+2023-05-23 02:36:04,599 [ WARN] [MC-Client-dev.internal-1] [c.h.c.i.c.t.TcpClientConnection]: MC-Client-dev [dev] [5.2.1] ClientConnection{alive=false, connectionId=7, channel=NioChannel{/127.0.0.1:59461->/127.0.0.1:5702}, remoteAddress=[127.0.0.1]:5702, lastReadTime=2023-05-23 02:36:04.586, lastWriteTime=2023-05-23 02:36:04.576, closedTime=2023-05-23 02:36:04.598, connected server version=null} closed. Reason: Heartbeat timed out
+com.hazelcast.spi.exception.TargetDisconnectedException: Heartbeat timed out to connection ClientConnection{alive=true, connectionId=7, channel=NioChannel{/127.0.0.1:59461->/127.0.0.1:5702}, remoteAddress=[127.0.0.1]:5702, lastReadTime=2023-05-23 02:36:04.586, lastWriteTime=2023-05-23 02:36:04.576, closedTime=never, connected server version=null}
+	at com.hazelcast.client.impl.connection.tcp.HeartbeatManager.lambda$start$0(HeartbeatManager.java:59) ~[hazelcast-enterprise-5.2.1.jar!/:5.2.1]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577) ~[?:?]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358) ~[?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.lang.Thread.run(Thread.java:1623) ~[?:?]
+	at com.hazelcast.internal.util.executor.HazelcastManagedThread.executeRun(HazelcastManagedThread.java:76) ~[hazelcast-enterprise-5.2.1.jar!/:5.2.1]
+	at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102) ~[hazelcast-enterprise-5.2.1.jar!/:5.2.1]
+2023-05-23 05:34:23,535 [ WARN] [MC-Client-dev.internal-3] [c.h.c.i.c.t.HeartbeatManager]: MC-Client-dev [dev] [5.2.1] Heartbeat failed over the connection: ClientConnection{alive=true, connectionId=9, channel=NioChannel{/127.0.0.1:59630->/127.0.0.1:5702}, remoteAddress=[127.0.0.1]:5702, lastReadTime=2023-05-23 05:18:08.619, lastWriteTime=2023-05-23 05:18:08.618, closedTime=never, connected server version=null}
+2023-05-23 05:34:23,538 [ WARN] [MC-Client-dev.internal-3] [c.h.c.i.c.t.TcpClientConnection]: MC-Client-dev [dev] [5.2.1] ClientConnection{alive=false, connectionId=9, channel=NioChannel{/127.0.0.1:59630->/127.0.0.1:5702}, remoteAddress=[127.0.0.1]:5702, lastReadTime=2023-05-23 05:18:08.619, lastWriteTime=2023-05-23 05:18:08.618, closedTime=2023-05-23 05:34:23.536, connected server version=null} closed. Reason: Heartbeat timed out
+com.hazelcast.spi.exception.TargetDisconnectedException: Heartbeat timed out to connection ClientConnection{alive=true, connectionId=9, channel=NioChannel{/127.0.0.1:59630->/127.0.0.1:5702}, remoteAddress=[127.0.0.1]:5702, lastReadTime=2023-05-23 05:18:08.619, lastWriteTime=2023-05-23 05:18:08.618, closedTime=never, connected server version=null}
+	at com.hazelcast.client.impl.connection.tcp.HeartbeatManager.lambda$start$0(HeartbeatManager.java:59) ~[hazelcast-enterprise-5.2.1.jar!/:5.2.1]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577) ~[?:?]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358) ~[?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.lang.Thread.run(Thread.java:1623) ~[?:?]
+	at com.hazelcast.internal.util.executor.HazelcastManagedThread.executeRun(HazelcastManagedThread.java:76) ~[hazelcast-enterprise-5.2.1.jar!/:5.2.1]
+	at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102) ~[hazelcast-enterprise-5.2.1.jar!/:5.2.1]
+2023-05-23 08:39:24,297 [ WARN] [MC-Client-dev.internal-1] [c.h.c.i.c.t.HeartbeatManager]: MC-Client-dev [dev] [5.2.1] Heartbeat failed over the connection: ClientConnection{alive=true, connectionId=10, channel=NioChannel{/127.0.0.1:59655->/127.0.0.1:5702}, remoteAddress=[127.0.0.1]:5702, lastReadTime=2023-05-23 08:23:28.388, lastWriteTime=2023-05-23 08:23:28.387, closedTime=never, connected server version=null}
+2023-05-23 08:39:24,307 [ WARN] [MC-Client-dev.internal-1] [c.h.c.i.c.t.TcpClientConnection]: MC-Client-dev [dev] [5.2.1] ClientConnection{alive=false, connectionId=10, channel=NioChannel{/127.0.0.1:59655->/127.0.0.1:5702}, remoteAddress=[127.0.0.1]:5702, lastReadTime=2023-05-23 08:23:28.388, lastWriteTime=2023-05-23 08:23:28.387, closedTime=2023-05-23 08:39:24.307, connected server version=null} closed. Reason: Heartbeat timed out
+com.hazelcast.spi.exception.TargetDisconnectedException: Heartbeat timed out to connection ClientConnection{alive=true, connectionId=10, channel=NioChannel{/127.0.0.1:59655->/127.0.0.1:5702}, remoteAddress=[127.0.0.1]:5702, lastReadTime=2023-05-23 08:23:28.388, lastWriteTime=2023-05-23 08:23:28.387, closedTime=never, connected server version=null}
+	at com.hazelcast.client.impl.connection.tcp.HeartbeatManager.lambda$start$0(HeartbeatManager.java:59) ~[hazelcast-enterprise-5.2.1.jar!/:5.2.1]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577) ~[?:?]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358) ~[?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.lang.Thread.run(Thread.java:1623) ~[?:?]
+	at com.hazelcast.internal.util.executor.HazelcastManagedThread.executeRun(HazelcastManagedThread.java:76) ~[hazelcast-enterprise-5.2.1.jar!/:5.2.1]
+	at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102) ~[hazelcast-enterprise-5.2.1.jar!/:5.2.1]
+2023-05-23 09:19:20,891 [ WARN] [MC-Client-dev.internal-2] [c.h.c.i.c.t.HeartbeatManager]: MC-Client-dev [dev] [5.2.1] Heartbeat failed over the connection: ClientConnection{alive=true, connectionId=12, channel=NioChannel{/127.0.0.1:59817->/127.0.0.1:5702}, remoteAddress=[127.0.0.1]:5702, lastReadTime=2023-05-23 09:16:19.990, lastWriteTime=2023-05-23 09:16:19.990, closedTime=never, connected server version=null}
+2023-05-23 09:19:20,892 [ WARN] [MC-Client-dev.internal-2] [c.h.c.i.c.t.TcpClientConnection]: MC-Client-dev [dev] [5.2.1] ClientConnection{alive=false, connectionId=12, channel=NioChannel{/127.0.0.1:59817->/127.0.0.1:5702}, remoteAddress=[127.0.0.1]:5702, lastReadTime=2023-05-23 09:16:19.990, lastWriteTime=2023-05-23 09:16:19.990, closedTime=2023-05-23 09:19:20.892, connected server version=null} closed. Reason: Heartbeat timed out
+com.hazelcast.spi.exception.TargetDisconnectedException: Heartbeat timed out to connection ClientConnection{alive=true, connectionId=12, channel=NioChannel{/127.0.0.1:59817->/127.0.0.1:5702}, remoteAddress=[127.0.0.1]:5702, lastReadTime=2023-05-23 09:16:19.990, lastWriteTime=2023-05-23 09:16:19.990, closedTime=never, connected server version=null}
+	at com.hazelcast.client.impl.connection.tcp.HeartbeatManager.lambda$start$0(HeartbeatManager.java:59) ~[hazelcast-enterprise-5.2.1.jar!/:5.2.1]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577) ~[?:?]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358) ~[?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.lang.Thread.run(Thread.java:1623) ~[?:?]
+	at com.hazelcast.internal.util.executor.HazelcastManagedThread.executeRun(HazelcastManagedThread.java:76) ~[hazelcast-enterprise-5.2.1.jar!/:5.2.1]
+	at com.hazelcast.internal.util.executor.HazelcastManagedThread.run(HazelcastManagedThread.java:102) ~[hazelcast-enterprise-5.2.1.jar!/:5.2.1]
